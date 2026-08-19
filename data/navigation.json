@@ -91,6 +91,12 @@
                                            "label":  "TRY 01",
                                            "title":  "Supabase pgvector",
                                            "file":  "content/book9/try01_supabase_pgvector.md"
+                                       },
+                                       {
+                                           "id":  "try09-github-collaboration",
+                                           "label":  "TRY 09",
+                                           "title":  "GitHub 협업 사용자 가이드",
+                                           "file":  "content/book9/try09_github협업가이드.md"
                                        }
                                    ]
                   },
