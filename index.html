@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="제조 AI 에이전트 교육을 위한 교재별 학습 페이지"
+    />
+    <title>제조 AI 에이전트 교육</title>
+    <link rel="stylesheet" href="index.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body class="auth-locked">
+    <section id="auth-gate" class="auth-gate" aria-labelledby="auth-title">
+      <form id="auth-form" class="auth-card" novalidate>
+        <p class="auth-eyebrow">2026 AI Agent Course</p>
+        <h1 id="auth-title">교육 페이지 입장</h1>
+        <p class="auth-description">안내받은 비밀번호를 입력해 주세요.</p>
+
+        <label class="auth-label" for="auth-password">비밀번호</label>
+        <div class="auth-input-row">
+          <input
+            id="auth-password"
+            class="auth-input"
+            type="password"
+            inputmode="numeric"
+            autocomplete="current-password"
+            maxlength="4"
+            required
+            aria-describedby="auth-message"
+          />
+          <button class="auth-submit" type="submit">입장</button>
+        </div>
+        <p id="auth-message" class="auth-message" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <a class="skip-link" href="#chapter-content">본문으로 바로가기</a>
+
+    <header class="site-header">
+      <div class="brand">
+        <button
+          id="sidebar-toggle"
+          class="icon-button sidebar-toggle"
+          type="button"
+          aria-label="챕터 메뉴 열기"
+          aria-controls="chapter-sidebar"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true">☰</span>
+        </button>
+        <div>
+          <p class="brand-eyebrow">2026 AI Agent Course</p>
+          <a class="brand-title" href="#/book1/ch01">제조 AI 에이전트 교육</a>
+        </div>
+      </div>
+
+      <nav id="book-menu" class="book-menu" aria-label="주 교재"></nav>
+    </header>
+
+    <div class="site-layout">
+      <aside id="chapter-sidebar" class="chapter-sidebar" aria-label="챕터 목록">
+        <div class="sidebar-heading">
+          <div>
+            <p class="sidebar-label">현재 교재</p>
+            <h2 id="current-book-title">교재 불러오는 중</h2>
+          </div>
+          <button
+            id="sidebar-close"
+            class="icon-button sidebar-close"
+            type="button"
+            aria-label="챕터 메뉴 닫기"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <label class="search-box" for="chapter-search">
+          <span class="sr-only">챕터 검색</span>
+          <input
+            id="chapter-search"
+            type="search"
+            placeholder="챕터 검색"
+            autocomplete="off"
+          />
+        </label>
+
+        <nav id="chapter-menu" class="chapter-menu" aria-label="현재 교재 챕터"></nav>
+      </aside>
+
+      <button id="sidebar-backdrop" class="sidebar-backdrop" type="button" aria-label="메뉴 닫기"></button>
+
+      <main class="content-shell">
+        <div id="page-status" class="page-status" role="status" aria-live="polite"></div>
+
+        <article id="chapter-content" class="chapter-content" tabindex="-1">
+          <div class="loading-state">
+            <span class="loading-dot" aria-hidden="true"></span>
+            교육 콘텐츠를 불러오고 있습니다.
+          </div>
+        </article>
+
+        <nav class="chapter-pagination" aria-label="챕터 이동">
+          <a id="previous-chapter" class="pagination-link" href="#">
+            <span class="pagination-label">이전 챕터</span>
+            <strong class="pagination-title">없음</strong>
+          </a>
+          <a id="next-chapter" class="pagination-link pagination-link-next" href="#">
+            <span class="pagination-label">다음 챕터</span>
+            <strong class="pagination-title">없음</strong>
+          </a>
+        </nav>
+      </main>
+    </div>
+
+    <noscript>
+      <div class="noscript-message">이 페이지는 메뉴와 Markdown 문서를 표시하기 위해 JavaScript가 필요합니다.</div>
+    </noscript>
+  </body>
+</html>

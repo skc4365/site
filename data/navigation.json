@@ -1,0 +1,686 @@
+﻿{
+    "siteTitle":  "제조 AI 에이전트 교육",
+    "defaultRoute":  "#/book1/ch01",
+    "books":  [
+                  {
+                      "id":  "book0",
+                      "shortTitle":  "AI 서비스",
+                      "title":  "AI 서비스 프로그래밍",
+                      "chapters":  [
+                                       {
+                                           "id":  "ch00",
+                                           "label":  "START",
+                                           "title":  "AI 서비스 프로그래밍",
+                                           "file":  "content/book0/ch00.md"
+                                       },
+                                       {
+                                           "id":  "ch01",
+                                           "label":  "CH 01",
+                                           "title":  "파이썬 기본 문법",
+                                           "file":  "content/book0/ch01_python_basics.md"
+                                       },
+                                       {
+                                           "id":  "ch02",
+                                           "label":  "CH 02",
+                                           "title":  "클래스·데코레이터·예외 처리·로깅",
+                                           "file":  "content/book0/ch02_python_core.md"
+                                       },
+                                       {
+                                           "id":  "ch03",
+                                           "label":  "CH 03",
+                                           "title":  "async/await 및 asyncio 비동기 프로그래밍",
+                                           "file":  "content/book0/ch03_asyncio.md"
+                                       },
+                                       {
+                                           "id":  "ch04",
+                                           "label":  "CH 04",
+                                           "title":  "Pydantic BaseModel 데이터 검증",
+                                           "file":  "content/book0/ch04_pydantic.md"
+                                       },
+                                       {
+                                           "id":  "ch05",
+                                           "label":  "CH 05",
+                                           "title":  "FastAPI RESTful API 설계",
+                                           "file":  "content/book0/ch05_fastapi_rest.md"
+                                       },
+                                       {
+                                           "id":  "ch06",
+                                           "label":  "CH 06",
+                                           "title":  "FastAPI 심화 기능 및 Streamlit UI 연동",
+                                           "file":  "content/book0/ch06_fastapi_streamlit.md"
+                                       }
+                                   ]
+                  },
+                  {
+                      "id":  "book9",
+                      "shortTitle":  "TRY",
+                      "title":  "직접 해보기",
+                      "chapters":  [
+                                       {
+                                           "id":  "try00-venv",
+                                           "label":  "TRY 00",
+                                           "title":  "venv 개발환경",
+                                           "file":  "content/book9/try00_venv.md"
+                                       },
+                                       {
+                                           "id":  "try00-pyenv-win",
+                                           "label":  "TRY 00",
+                                           "title":  "pyenv-win",
+                                           "file":  "content/book9/try00_pyenv-win.md"
+                                       },
+                                       {
+                                           "id":  "try00-poetry",
+                                           "label":  "TRY 00",
+                                           "title":  "Poetry",
+                                           "file":  "content/book9/try00_poetry.md"
+                                       },
+                                       {
+                                           "id":  "try01-supabase",
+                                           "label":  "TRY 01",
+                                           "title":  "Supabase",
+                                           "file":  "content/book9/try01_supabase.md"
+                                       },
+                                       {
+                                           "id":  "try01-supabase-postgresql",
+                                           "label":  "TRY 01",
+                                           "title":  "Supabase PostgreSQL",
+                                           "file":  "content/book9/try01_supabase_postgreSQL.md"
+                                       },
+                                       {
+                                           "id":  "try01-supabase-pgvector",
+                                           "label":  "TRY 01",
+                                           "title":  "Supabase pgvector",
+                                           "file":  "content/book9/try01_supabase_pgvector.md"
+                                       }
+                                   ]
+                  },
+                  {
+                      "id":  "book1",
+                      "shortTitle":  "교재 1",
+                      "title":  "RAG 비법노트 기본편",
+                      "chapters":  [
+                                       {
+                                           "id":  "ch01",
+                                           "title":  "RAG 이해하기",
+                                           "file":  "content/book1/ch01.md"
+                                       },
+                                       {
+                                           "id":  "ch01-source",
+                                           "label":  "소스 01",
+                                           "title":  "Chapter 01 교재 소스",
+                                           "file":  "content/book1/ch_01_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch02",
+                                           "title":  "환경 설정",
+                                           "file":  "content/book1/ch02.md"
+                                       },
+                                       {
+                                           "id":  "ch02-source",
+                                           "label":  "소스 02",
+                                           "title":  "Chapter 02 교재 소스",
+                                           "file":  "content/book1/ch_02_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch03",
+                                           "title":  "LLM 기본 용어",
+                                           "file":  "content/book1/ch03.md"
+                                       },
+                                       {
+                                           "id":  "ch03-source",
+                                           "label":  "소스 03",
+                                           "title":  "Chapter 03 교재 소스",
+                                           "file":  "content/book1/ch_03_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch04",
+                                           "title":  "LangChain 시작하기",
+                                           "file":  "content/book1/ch04.md"
+                                       },
+                                       {
+                                           "id":  "ch04-source",
+                                           "label":  "소스 04",
+                                           "title":  "Chapter 04 교재 소스",
+                                           "file":  "content/book1/ch_04_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch05",
+                                           "title":  "프롬프트",
+                                           "file":  "content/book1/ch05.md"
+                                       },
+                                       {
+                                           "id":  "ch05-source",
+                                           "label":  "소스 05",
+                                           "title":  "Chapter 05 교재 소스",
+                                           "file":  "content/book1/ch_05_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch06",
+                                           "title":  "출력 파서",
+                                           "file":  "content/book1/ch06.md"
+                                       },
+                                       {
+                                           "id":  "ch06-source",
+                                           "label":  "소스 06",
+                                           "title":  "Chapter 06 교재 소스",
+                                           "file":  "content/book1/ch_06_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch07",
+                                           "title":  "모델",
+                                           "file":  "content/book1/ch07.md"
+                                       },
+                                       {
+                                           "id":  "ch07-source",
+                                           "label":  "소스 07",
+                                           "title":  "Chapter 07 교재 소스",
+                                           "file":  "content/book1/ch_07_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch08",
+                                           "title":  "메모리",
+                                           "file":  "content/book1/ch08.md"
+                                       },
+                                       {
+                                           "id":  "ch08-source",
+                                           "label":  "소스 08",
+                                           "title":  "Chapter 08 교재 소스",
+                                           "file":  "content/book1/ch_08_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch09",
+                                           "title":  "문서 로더",
+                                           "file":  "content/book1/ch09.md"
+                                       },
+                                       {
+                                           "id":  "ch09-source",
+                                           "label":  "소스 09",
+                                           "title":  "Chapter 09 교재 소스",
+                                           "file":  "content/book1/ch_09_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch10",
+                                           "title":  "텍스트 분할",
+                                           "file":  "content/book1/ch10.md"
+                                       },
+                                       {
+                                           "id":  "ch10-source",
+                                           "label":  "소스 10",
+                                           "title":  "Chapter 10 교재 소스",
+                                           "file":  "content/book1/ch_10_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch11",
+                                           "title":  "임베딩",
+                                           "file":  "content/book1/ch11.md"
+                                       },
+                                       {
+                                           "id":  "ch11-source",
+                                           "label":  "소스 11",
+                                           "title":  "Chapter 11 교재 소스",
+                                           "file":  "content/book1/ch_11_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch12",
+                                           "title":  "벡터 스토어",
+                                           "file":  "content/book1/ch12.md"
+                                       },
+                                       {
+                                           "id":  "ch12-source",
+                                           "label":  "소스 12",
+                                           "title":  "Chapter 12 교재 소스",
+                                           "file":  "content/book1/ch_12_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch13",
+                                           "title":  "리트리버",
+                                           "file":  "content/book1/ch13.md"
+                                       },
+                                       {
+                                           "id":  "ch13-source",
+                                           "label":  "소스 13",
+                                           "title":  "Chapter 13 교재 소스",
+                                           "file":  "content/book1/ch_13_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch14",
+                                           "title":  "Streamlit으로 ChatGPT 웹 앱 제작하기",
+                                           "file":  "content/book1/ch14.md"
+                                       },
+                                       {
+                                           "id":  "ch14-source",
+                                           "label":  "소스 14",
+                                           "title":  "Chapter 14 교재 소스",
+                                           "file":  "content/book1/ch_14_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch15",
+                                           "title":  "이메일 업무 자동화 챗봇",
+                                           "file":  "content/book1/ch15.md"
+                                       },
+                                       {
+                                           "id":  "ch15-source",
+                                           "label":  "소스 15",
+                                           "title":  "Chapter 15 교재 소스",
+                                           "file":  "content/book1/ch_15_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch16",
+                                           "title":  "다양한 모델을 활용한 챗봇",
+                                           "file":  "content/book1/ch16.md"
+                                       },
+                                       {
+                                           "id":  "ch16-source",
+                                           "label":  "소스 16",
+                                           "title":  "Chapter 16 교재 소스",
+                                           "file":  "content/book1/ch_16_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch17",
+                                           "title":  "RAG 챗봇",
+                                           "file":  "content/book1/ch17.md"
+                                       },
+                                       {
+                                           "id":  "ch17-source",
+                                           "label":  "소스 17",
+                                           "title":  "Chapter 17 교재 소스",
+                                           "file":  "content/book1/ch_17_교재소스.md",
+                                           "textbookSource":  true
+                                       }
+                                   ]
+                  },
+                  {
+                      "id":  "book2",
+                      "shortTitle":  "교재 2",
+                      "title":  "RAG 비법노트 심화편",
+                      "chapters":  [
+                                       {
+                                           "id":  "ch01",
+                                           "title":  "리랭커로 검색된 문서 순위 조정하기",
+                                           "file":  "content/book2/ch01.md"
+                                       },
+                                       {
+                                           "id":  "ch01-source",
+                                           "label":  "소스 01",
+                                           "title":  "Chapter 01 교재 소스",
+                                           "file":  "content/book2/ch_01_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch02",
+                                           "title":  "RAG 파이프라인",
+                                           "file":  "content/book2/ch02.md"
+                                       },
+                                       {
+                                           "id":  "ch02-source",
+                                           "label":  "소스 02",
+                                           "title":  "Chapter 02 교재 소스",
+                                           "file":  "content/book2/ch_02_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch03",
+                                           "title":  "사전에 정의된 체인",
+                                           "file":  "content/book2/ch03.md"
+                                       },
+                                       {
+                                           "id":  "ch03-source",
+                                           "label":  "소스 03",
+                                           "title":  "Chapter 03 교재 소스",
+                                           "file":  "content/book2/ch_03_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch04",
+                                           "title":  "LCEL 고급 문법으로 Runnable 활용하기",
+                                           "file":  "content/book2/ch04.md"
+                                       },
+                                       {
+                                           "id":  "ch04-source",
+                                           "label":  "소스 04",
+                                           "title":  "Chapter 04 교재 소스",
+                                           "file":  "content/book2/ch_04_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch05",
+                                           "title":  "RAGAS로 답변 평가하기",
+                                           "file":  "content/book2/ch05.md"
+                                       },
+                                       {
+                                           "id":  "ch05-source",
+                                           "label":  "소스 05",
+                                           "title":  "Chapter 05 교재 소스",
+                                           "file":  "content/book2/ch_05_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch06",
+                                           "title":  "LangSmith API를 활용한 프롬프트 최적화",
+                                           "file":  "content/book2/ch06.md"
+                                       },
+                                       {
+                                           "id":  "ch06-source",
+                                           "label":  "소스 06",
+                                           "title":  "Chapter 06 교재 소스",
+                                           "file":  "content/book2/ch_06_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch07",
+                                           "title":  "도구와 툴킷",
+                                           "file":  "content/book2/ch07.md"
+                                       },
+                                       {
+                                           "id":  "ch07-source",
+                                           "label":  "소스 07",
+                                           "title":  "Chapter 07 교재 소스",
+                                           "file":  "content/book2/ch_07_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch08",
+                                           "title":  "에이전트 주요 기능",
+                                           "file":  "content/book2/ch08.md"
+                                       },
+                                       {
+                                           "id":  "ch08-source",
+                                           "label":  "소스 08",
+                                           "title":  "Chapter 08 교재 소스",
+                                           "file":  "content/book2/ch_08_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch09",
+                                           "title":  "에이전트 활용",
+                                           "file":  "content/book2/ch09.md"
+                                       },
+                                       {
+                                           "id":  "ch09-source",
+                                           "label":  "소스 09",
+                                           "title":  "Chapter 09 교재 소스",
+                                           "file":  "content/book2/ch_09_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch10",
+                                           "title":  "Streamlit을 이용한 서비스 배포 실습",
+                                           "file":  "content/book2/ch10.md"
+                                       },
+                                       {
+                                           "id":  "ch10-source",
+                                           "label":  "소스 10",
+                                           "title":  "Chapter 10 교재 소스",
+                                           "file":  "content/book2/ch_10_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch11",
+                                           "title":  "LangServe",
+                                           "file":  "content/book2/ch11.md"
+                                       },
+                                       {
+                                           "id":  "ch11-source",
+                                           "label":  "소스 11",
+                                           "title":  "Chapter 11 교재 소스",
+                                           "file":  "content/book2/ch_11_교재소스.md",
+                                           "textbookSource":  true
+                                       }
+                                   ]
+                  },
+                  {
+                      "id":  "book3",
+                      "shortTitle":  "교재 3",
+                      "title":  "AI 에이전트 개발 입문+실전",
+                      "chapters":  [
+                                       {
+                                           "id":  "ch01",
+                                           "label":  "CH 01",
+                                           "title":  "LLM 기반 의사결정 구조와 에이전트 동작 방식",
+                                           "file":  "content/book3/ch01.md",
+                                           "source":  false
+                                       },
+                                       {
+                                           "id":  "ch01-source",
+                                           "label":  "소스 01",
+                                           "title":  "Chapter 01 교재 소스",
+                                           "file":  "content/book3/ch_01_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch01-manufacturing",
+                                           "label":  "실습 01",
+                                           "title":  "기계 상태 도우미 그리기",
+                                           "file":  "content/book3/ch01_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch02",
+                                           "label":  "CH 02",
+                                           "title":  "AI 에이전트를 구성하는 3가지 핵심 요소",
+                                           "file":  "content/book3/ch02.md",
+                                           "source":  false
+                                       },
+                                       {
+                                           "id":  "ch02-source",
+                                           "label":  "소스 02",
+                                           "title":  "Chapter 02 교재 소스",
+                                           "file":  "content/book3/ch_02_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch02-manufacturing",
+                                           "label":  "실습 02",
+                                           "title":  "생각·기능·기억 나누기",
+                                           "file":  "content/book3/ch02_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch03",
+                                           "label":  "CH 03",
+                                           "title":  "목적에 따른 에이전트 아키텍처 설계 기준",
+                                           "file":  "content/book3/ch03.md",
+                                           "source":  false
+                                       },
+                                       {
+                                           "id":  "ch03-source",
+                                           "label":  "소스 03",
+                                           "title":  "Chapter 03 교재 소스",
+                                           "file":  "content/book3/ch_03_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch03-manufacturing",
+                                           "label":  "실습 03",
+                                           "title":  "가장 단순한 구조 고르기",
+                                           "file":  "content/book3/ch03_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch04",
+                                           "label":  "CH 04",
+                                           "title":  "에이전트 개발 환경 구축",
+                                           "file":  "content/book3/ch04.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch04-source",
+                                           "label":  "소스 04",
+                                           "title":  "Chapter 04 교재 소스",
+                                           "file":  "content/book3/ch_04_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch04-manufacturing",
+                                           "label":  "실습 04",
+                                           "title":  "연습 프로젝트 준비하기",
+                                           "file":  "content/book3/ch04_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch05",
+                                           "label":  "CH 05",
+                                           "title":  "LangGraph 기반 에이전트 설계",
+                                           "file":  "content/book3/ch05.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch05-source",
+                                           "label":  "소스 05",
+                                           "title":  "Chapter 05 교재 소스",
+                                           "file":  "content/book3/ch_05_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch05-manufacturing",
+                                           "label":  "실습 05",
+                                           "title":  "작업 순서를 그래프로 만들기",
+                                           "file":  "content/book3/ch05_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch06",
+                                           "label":  "CH 06",
+                                           "title":  "싱글 에이전트 구현",
+                                           "file":  "content/book3/ch06.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch06-source",
+                                           "label":  "소스 06",
+                                           "title":  "Chapter 06 교재 소스",
+                                           "file":  "content/book3/ch_06_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch06-manufacturing",
+                                           "label":  "실습 06",
+                                           "title":  "기능을 사용하는 도우미 만들기",
+                                           "file":  "content/book3/ch06_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch07",
+                                           "label":  "CH 07",
+                                           "title":  "멀티 에이전트 구현",
+                                           "file":  "content/book3/ch07.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch07-source",
+                                           "label":  "소스 07",
+                                           "title":  "Chapter 07 교재 소스",
+                                           "file":  "content/book3/ch_07_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch07-manufacturing",
+                                           "label":  "실습 07",
+                                           "title":  "역할을 나눈 도우미 만들기",
+                                           "file":  "content/book3/ch07_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch08",
+                                           "label":  "CH 08",
+                                           "title":  "에이전트 메모리 설계와 개인화 구현",
+                                           "file":  "content/book3/ch08.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch08-source",
+                                           "label":  "소스 08",
+                                           "title":  "Chapter 08 교재 소스",
+                                           "file":  "content/book3/ch_08_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch08-manufacturing",
+                                           "label":  "실습 08",
+                                           "title":  "현재 작업과 확인된 기록 기억하기",
+                                           "file":  "content/book3/ch08_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch09",
+                                           "label":  "CH 09",
+                                           "title":  "MCP 기반 외부 도구 연동",
+                                           "file":  "content/book3/ch09.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch09-source",
+                                           "label":  "소스 09",
+                                           "title":  "Chapter 09 교재 소스",
+                                           "file":  "content/book3/ch_09_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch09-manufacturing",
+                                           "label":  "실습 09",
+                                           "title":  "데이터 기능을 별도 프로그램으로 나누기",
+                                           "file":  "content/book3/ch09_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch10",
+                                           "label":  "CH 10",
+                                           "title":  "A2A 기반 에이전트 상호운용",
+                                           "file":  "content/book3/ch10.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch10-source",
+                                           "label":  "소스 10",
+                                           "title":  "Chapter 10 교재 소스",
+                                           "file":  "content/book3/ch_10_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch10-manufacturing",
+                                           "label":  "실습 10",
+                                           "title":  "독립된 도우미끼리 대화하기",
+                                           "file":  "content/book3/ch10_manufacturing.md",
+                                           "practice":  true
+                                       },
+                                       {
+                                           "id":  "ch11",
+                                           "label":  "CH 11",
+                                           "title":  "웹 검색·RAG·파일 관리 범용 멀티 에이전트",
+                                           "file":  "content/book3/ch11.md",
+                                           "source":  true
+                                       },
+                                       {
+                                           "id":  "ch11-source",
+                                           "label":  "소스 11",
+                                           "title":  "Chapter 11 교재 소스",
+                                           "file":  "content/book3/ch_11_교재소스.md",
+                                           "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch11-manufacturing",
+                                           "label":  "실습 11",
+                                           "title":  "기계 상태 도우미 완성하기",
+                                           "file":  "content/book3/ch11_manufacturing.md",
+                                           "practice":  true
+                                       }
+                                   ]
+                  }
+              ]
+}
