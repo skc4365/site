@@ -747,30 +747,68 @@ input {
   }
 
   .content-shell {
-    padding: 18px 14px 36px;
+    width: 100%;
+    padding: 0 0 28px;
   }
 
   .chapter-content {
     min-height: 480px;
-    padding: 28px 22px;
-    border-radius: 12px;
+    padding: 20px 10px;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 0.9rem;
   }
 
   .chapter-content h1 {
     max-width: none;
-    font-size: 1.48rem;
+    font-size: 1.3rem;
+  }
+
+  .chapter-content h2 {
+    font-size: 1rem;
+  }
+
+  .chapter-content h3 {
+    font-size: 0.92rem;
+  }
+
+  .chapter-content h2::before {
+    margin-right: 0.35em;
+  }
+
+  .chapter-content ul,
+  .chapter-content ol {
+    padding-left: 1.2em;
+  }
+
+  .chapter-content p,
+  .chapter-content li,
+  .chapter-content a {
+    overflow-wrap: anywhere;
   }
 
   .chapter-content pre {
     margin-right: -10px;
     margin-left: -10px;
-    padding: 16px;
-    font-size: 0.88rem;
-    border-radius: 8px;
+    padding: 14px;
+    font-size: 0.84rem;
+    border-right: 0;
+    border-left-width: 4px;
+    border-radius: 0;
+  }
+
+  .chapter-content table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
   }
 
   .chapter-pagination {
     grid-template-columns: 1fr;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .pagination-link-next {
