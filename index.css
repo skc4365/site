@@ -688,6 +688,12 @@ input {
     --header-height: auto;
   }
 
+  .auth-gate {
+    align-items: start;
+    justify-items: center;
+    padding: 28px 14px;
+  }
+
   .site-header {
     position: relative;
     gap: 5px;
