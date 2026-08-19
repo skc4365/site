@@ -26,6 +26,12 @@
                                            "file":  "content/book0/ch02_python_core.md"
                                        },
                                        {
+                                           "id":  "ch02-decorator",
+                                           "label":  "보충 02",
+                                           "title":  "데코레이터의 종류와 활용",
+                                           "file":  "content/book0/ch02_python_core_데코레이터.md"
+                                       },
+                                       {
                                            "id":  "ch03",
                                            "label":  "CH 03",
                                            "title":  "async/await 및 asyncio 비동기 프로그래밍",
