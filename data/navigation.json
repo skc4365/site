@@ -99,6 +99,12 @@
                                            "file":  "content/book9/try01_supabase_pgvector.md"
                                        },
                                        {
+                                           "id":  "try03-langsmith",
+                                           "label":  "TRY 03",
+                                           "title":  "LangSmith 실행 추적",
+                                           "file":  "content/book9/try03_LangSmith.md"
+                                       },
+                                       {
                                            "id":  "try09-github-collaboration",
                                            "label":  "TRY 09",
                                            "title":  "GitHub 협업 사용자 가이드",
@@ -253,7 +259,7 @@
                                        {
                                            "id":  "ch01",
                                            "title":  "RAG 이해하기",
-                                           "file":  "content/book1/ch01.md"
+                                           "file":  "content/book1/ch01_RAG이해.md"
                                        },
                                        {
                                            "id":  "ch01-source",

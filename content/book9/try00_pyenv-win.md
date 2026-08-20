@@ -3,7 +3,7 @@
 ## 버전별 관리 예시
 
 ```text
-Windows PC
+Windows PC (C:\Users\User\.pyenv\pyenv-win)
 └─ pyenv-win
    ├─ Python 3.10.11
    │  └─ legacy-api/      → .python-version: 3.10.11
