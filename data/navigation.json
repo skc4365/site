@@ -107,6 +107,145 @@
                                    ]
                   },
                   {
+                      "id":  "langchain-kr",
+                      "shortTitle":  "LangChain KR",
+                      "title":  "langchain-kr 전체 소스",
+                      "chapters":  [
+                                       {
+                                           "id":  "ch01",
+                                           "label":  "CH 01",
+                                           "title":  "Basic",
+                                           "file":  "content/langchain-kr/ch01.md"
+                                       },
+                                       {
+                                           "id":  "ch02",
+                                           "label":  "CH 02",
+                                           "title":  "Prompt",
+                                           "file":  "content/langchain-kr/ch02.md"
+                                       },
+                                       {
+                                           "id":  "ch03",
+                                           "label":  "CH 03",
+                                           "title":  "OutputParser",
+                                           "file":  "content/langchain-kr/ch03.md"
+                                       },
+                                       {
+                                           "id":  "ch04",
+                                           "label":  "CH 04",
+                                           "title":  "Model",
+                                           "file":  "content/langchain-kr/ch04.md"
+                                       },
+                                       {
+                                           "id":  "ch05",
+                                           "label":  "CH 05",
+                                           "title":  "Memory",
+                                           "file":  "content/langchain-kr/ch05.md"
+                                       },
+                                       {
+                                           "id":  "ch06",
+                                           "label":  "CH 06",
+                                           "title":  "DocumentLoader",
+                                           "file":  "content/langchain-kr/ch06.md"
+                                       },
+                                       {
+                                           "id":  "ch07",
+                                           "label":  "CH 07",
+                                           "title":  "TextSplitter",
+                                           "file":  "content/langchain-kr/ch07.md"
+                                       },
+                                       {
+                                           "id":  "ch08",
+                                           "label":  "CH 08",
+                                           "title":  "Embeddings",
+                                           "file":  "content/langchain-kr/ch08.md"
+                                       },
+                                       {
+                                           "id":  "ch09",
+                                           "label":  "CH 09",
+                                           "title":  "VectorStore",
+                                           "file":  "content/langchain-kr/ch09.md"
+                                       },
+                                       {
+                                           "id":  "ch10",
+                                           "label":  "CH 10",
+                                           "title":  "Retriever",
+                                           "file":  "content/langchain-kr/ch10.md"
+                                       },
+                                       {
+                                           "id":  "ch11",
+                                           "label":  "CH 11",
+                                           "title":  "Reranker",
+                                           "file":  "content/langchain-kr/ch11.md"
+                                       },
+                                       {
+                                           "id":  "ch12",
+                                           "label":  "CH 12",
+                                           "title":  "RAG",
+                                           "file":  "content/langchain-kr/ch12.md"
+                                       },
+                                       {
+                                           "id":  "ch13",
+                                           "label":  "CH 13",
+                                           "title":  "LangChain Expression Language",
+                                           "file":  "content/langchain-kr/ch13.md"
+                                       },
+                                       {
+                                           "id":  "ch14",
+                                           "label":  "CH 14",
+                                           "title":  "Chains",
+                                           "file":  "content/langchain-kr/ch14.md"
+                                       },
+                                       {
+                                           "id":  "ch15",
+                                           "label":  "CH 15",
+                                           "title":  "Agent",
+                                           "file":  "content/langchain-kr/ch15.md"
+                                       },
+                                       {
+                                           "id":  "ch16",
+                                           "label":  "CH 16",
+                                           "title":  "Evaluations",
+                                           "file":  "content/langchain-kr/ch16.md"
+                                       },
+                                       {
+                                           "id":  "ch17",
+                                           "label":  "CH 17",
+                                           "title":  "LangGraph",
+                                           "file":  "content/langchain-kr/ch17.md"
+                                       },
+                                       {
+                                           "id":  "ch18",
+                                           "label":  "CH 18",
+                                           "title":  "FineTuning",
+                                           "file":  "content/langchain-kr/ch18.md"
+                                       },
+                                       {
+                                           "id":  "ch19",
+                                           "label":  "CH 19",
+                                           "title":  "Streamlit",
+                                           "file":  "content/langchain-kr/ch19.md"
+                                       },
+                                       {
+                                           "id":  "ch20",
+                                           "label":  "CH 20",
+                                           "title":  "Projects",
+                                           "file":  "content/langchain-kr/ch20.md"
+                                       },
+                                       {
+                                           "id":  "ch22",
+                                           "label":  "CH 22",
+                                           "title":  "OpenAI",
+                                           "file":  "content/langchain-kr/ch22.md"
+                                       },
+                                       {
+                                           "id":  "ch99",
+                                           "label":  "CH 99",
+                                           "title":  "Projects",
+                                           "file":  "content/langchain-kr/ch99.md"
+                                       }
+                                    ]
+                  },
+                  {
                       "id":  "book1",
                       "shortTitle":  "교재 1",
                       "title":  "RAG 비법노트 기본편",
@@ -167,7 +306,14 @@
                                        {
                                            "id":  "ch05-source",
                                            "label":  "소스 05",
-                                           "title":  "Chapter 05 교재 소스",
+                                           "title":  "Chapter 05 원본 교재 소스",
+                                           "file":  "content/book1/ch_05_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch05-source-2",
+                                           "label":  "보완 05",
+                                           "title":  "Chapter 05 보완 교재 소스",
                                            "file":  "content/book1/ch_05_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -179,7 +325,14 @@
                                        {
                                            "id":  "ch06-source",
                                            "label":  "소스 06",
-                                           "title":  "Chapter 06 교재 소스",
+                                           "title":  "Chapter 06 원본 교재 소스",
+                                           "file":  "content/book1/ch_06_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch06-source-2",
+                                           "label":  "보완 06",
+                                           "title":  "Chapter 06 보완 교재 소스",
                                            "file":  "content/book1/ch_06_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -203,7 +356,14 @@
                                        {
                                            "id":  "ch08-source",
                                            "label":  "소스 08",
-                                           "title":  "Chapter 08 교재 소스",
+                                           "title":  "Chapter 08 원본 교재 소스",
+                                           "file":  "content/book1/ch_08_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch08-source-2",
+                                           "label":  "보완 08",
+                                           "title":  "Chapter 08 보완 교재 소스",
                                            "file":  "content/book1/ch_08_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -215,7 +375,14 @@
                                        {
                                            "id":  "ch09-source",
                                            "label":  "소스 09",
-                                           "title":  "Chapter 09 교재 소스",
+                                           "title":  "Chapter 09 원본 교재 소스",
+                                           "file":  "content/book1/ch_09_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch09-source-2",
+                                           "label":  "보완 09",
+                                           "title":  "Chapter 09 보완 교재 소스",
                                            "file":  "content/book1/ch_09_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -227,7 +394,14 @@
                                        {
                                            "id":  "ch10-source",
                                            "label":  "소스 10",
-                                           "title":  "Chapter 10 교재 소스",
+                                           "title":  "Chapter 10 원본 교재 소스",
+                                           "file":  "content/book1/ch_10_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch10-source-2",
+                                           "label":  "보완 10",
+                                           "title":  "Chapter 10 보완 교재 소스",
                                            "file":  "content/book1/ch_10_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -239,7 +413,14 @@
                                        {
                                            "id":  "ch11-source",
                                            "label":  "소스 11",
-                                           "title":  "Chapter 11 교재 소스",
+                                           "title":  "Chapter 11 원본 교재 소스",
+                                           "file":  "content/book1/ch_11_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch11-source-2",
+                                           "label":  "보완 11",
+                                           "title":  "Chapter 11 보완 교재 소스",
                                            "file":  "content/book1/ch_11_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -251,7 +432,14 @@
                                        {
                                            "id":  "ch12-source",
                                            "label":  "소스 12",
-                                           "title":  "Chapter 12 교재 소스",
+                                           "title":  "Chapter 12 원본 교재 소스",
+                                           "file":  "content/book1/ch_12_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch12-source-2",
+                                           "label":  "보완 12",
+                                           "title":  "Chapter 12 보완 교재 소스",
                                            "file":  "content/book1/ch_12_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -263,7 +451,14 @@
                                        {
                                            "id":  "ch13-source",
                                            "label":  "소스 13",
-                                           "title":  "Chapter 13 교재 소스",
+                                           "title":  "Chapter 13 원본 교재 소스",
+                                           "file":  "content/book1/ch_13_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch13-source-2",
+                                           "label":  "보완 13",
+                                           "title":  "Chapter 13 보완 교재 소스",
                                            "file":  "content/book1/ch_13_교재소스_2.md",
                                            "textbookSource":  true
                                        },
@@ -354,8 +549,15 @@
                                        {
                                            "id":  "ch03-source",
                                            "label":  "소스 03",
-                                           "title":  "Chapter 03 교재 소스",
+                                           "title":  "Chapter 03 원본 교재 소스",
                                            "file":  "content/book2/ch_03_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch03-source-2",
+                                           "label":  "보완 03",
+                                           "title":  "Chapter 03 보완 교재 소스",
+                                           "file":  "content/book2/ch_03_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -366,8 +568,15 @@
                                        {
                                            "id":  "ch04-source",
                                            "label":  "소스 04",
-                                           "title":  "Chapter 04 교재 소스",
+                                           "title":  "Chapter 04 원본 교재 소스",
                                            "file":  "content/book2/ch_04_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch04-source-2",
+                                           "label":  "보완 04",
+                                           "title":  "Chapter 04 보완 교재 소스",
+                                           "file":  "content/book2/ch_04_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -378,8 +587,15 @@
                                        {
                                            "id":  "ch05-source",
                                            "label":  "소스 05",
-                                           "title":  "Chapter 05 교재 소스",
+                                           "title":  "Chapter 05 원본 교재 소스",
                                            "file":  "content/book2/ch_05_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch05-source-2",
+                                           "label":  "보완 05",
+                                           "title":  "Chapter 05 보완 교재 소스",
+                                           "file":  "content/book2/ch_05_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -390,8 +606,15 @@
                                        {
                                            "id":  "ch06-source",
                                            "label":  "소스 06",
-                                           "title":  "Chapter 06 교재 소스",
+                                           "title":  "Chapter 06 원본 교재 소스",
                                            "file":  "content/book2/ch_06_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch06-source-2",
+                                           "label":  "보완 06",
+                                           "title":  "Chapter 06 보완 교재 소스",
+                                           "file":  "content/book2/ch_06_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -414,8 +637,15 @@
                                        {
                                            "id":  "ch08-source",
                                            "label":  "소스 08",
-                                           "title":  "Chapter 08 교재 소스",
+                                           "title":  "Chapter 08 원본 교재 소스",
                                            "file":  "content/book2/ch_08_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch08-source-2",
+                                           "label":  "보완 08",
+                                           "title":  "Chapter 08 보완 교재 소스",
+                                           "file":  "content/book2/ch_08_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -426,8 +656,15 @@
                                        {
                                            "id":  "ch09-source",
                                            "label":  "소스 09",
-                                           "title":  "Chapter 09 교재 소스",
+                                           "title":  "Chapter 09 원본 교재 소스",
                                            "file":  "content/book2/ch_09_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch09-source-2",
+                                           "label":  "보완 09",
+                                           "title":  "Chapter 09 보완 교재 소스",
+                                           "file":  "content/book2/ch_09_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -438,8 +675,15 @@
                                        {
                                            "id":  "ch10-source",
                                            "label":  "소스 10",
-                                           "title":  "Chapter 10 교재 소스",
+                                           "title":  "Chapter 10 원본 교재 소스",
                                            "file":  "content/book2/ch_10_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch10-source-2",
+                                           "label":  "보완 10",
+                                           "title":  "Chapter 10 보완 교재 소스",
+                                           "file":  "content/book2/ch_10_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -450,8 +694,15 @@
                                        {
                                            "id":  "ch11-source",
                                            "label":  "소스 11",
-                                           "title":  "Chapter 11 교재 소스",
+                                           "title":  "Chapter 11 원본 교재 소스",
                                            "file":  "content/book2/ch_11_교재소스.md",
+                                           "textbookSource":  true
+                                           },
+                                           {
+                                           "id":  "ch11-source-2",
+                                           "label":  "보완 11",
+                                           "title":  "Chapter 11 보완 교재 소스",
+                                           "file":  "content/book2/ch_11_교재소스_2.md",
                                            "textbookSource":  true
                                        }
                                    ]

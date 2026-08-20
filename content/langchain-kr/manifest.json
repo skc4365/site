@@ -1,0 +1,206 @@
+{
+    "generatedAt":  "2026-08-20T16:46:19",
+    "source":  "https://github.com/teddylee777/langchain-kr",
+    "python":  "3.12",
+    "langchain":  "1.x",
+    "chapters":  [
+                     {
+                         "id":  "ch01",
+                         "label":  "CH 01",
+                         "title":  "Basic",
+                         "file":  "content/langchain-kr/ch01.md",
+                         "notebooks":  5,
+                         "codeCells":  81,
+                         "files":  5
+                     },
+                     {
+                         "id":  "ch02",
+                         "label":  "CH 02",
+                         "title":  "Prompt",
+                         "file":  "content/langchain-kr/ch02.md",
+                         "notebooks":  5,
+                         "codeCells":  98,
+                         "files":  7
+                     },
+                     {
+                         "id":  "ch03",
+                         "label":  "CH 03",
+                         "title":  "OutputParser",
+                         "file":  "content/langchain-kr/ch03.md",
+                         "notebooks":  8,
+                         "codeCells":  76,
+                         "files":  8
+                     },
+                     {
+                         "id":  "ch04",
+                         "label":  "CH 04",
+                         "title":  "Model",
+                         "file":  "content/langchain-kr/ch04.md",
+                         "notebooks":  11,
+                         "codeCells":  100,
+                         "files":  11
+                     },
+                     {
+                         "id":  "ch05",
+                         "label":  "CH 05",
+                         "title":  "Memory",
+                         "file":  "content/langchain-kr/ch05.md",
+                         "notebooks":  10,
+                         "codeCells":  93,
+                         "files":  10
+                     },
+                     {
+                         "id":  "ch06",
+                         "label":  "CH 06",
+                         "title":  "DocumentLoader",
+                         "file":  "content/langchain-kr/ch06.md",
+                         "notebooks":  14,
+                         "codeCells":  131,
+                         "files":  16
+                     },
+                     {
+                         "id":  "ch07",
+                         "label":  "CH 07",
+                         "title":  "TextSplitter",
+                         "file":  "content/langchain-kr/ch07.md",
+                         "notebooks":  8,
+                         "codeCells":  96,
+                         "files":  8
+                     },
+                     {
+                         "id":  "ch08",
+                         "label":  "CH 08",
+                         "title":  "Embeddings",
+                         "file":  "content/langchain-kr/ch08.md",
+                         "notebooks":  7,
+                         "codeCells":  86,
+                         "files":  7
+                     },
+                     {
+                         "id":  "ch09",
+                         "label":  "CH 09",
+                         "title":  "VectorStore",
+                         "file":  "content/langchain-kr/ch09.md",
+                         "notebooks":  3,
+                         "codeCells":  121,
+                         "files":  3
+                     },
+                     {
+                         "id":  "ch10",
+                         "label":  "CH 10",
+                         "title":  "Retriever",
+                         "file":  "content/langchain-kr/ch10.md",
+                         "notebooks":  11,
+                         "codeCells":  168,
+                         "files":  11
+                     },
+                     {
+                         "id":  "ch11",
+                         "label":  "CH 11",
+                         "title":  "Reranker",
+                         "file":  "content/langchain-kr/ch11.md",
+                         "notebooks":  4,
+                         "codeCells":  21,
+                         "files":  4
+                     },
+                     {
+                         "id":  "ch12",
+                         "label":  "CH 12",
+                         "title":  "RAG",
+                         "file":  "content/langchain-kr/ch12.md",
+                         "notebooks":  8,
+                         "codeCells":  176,
+                         "files":  10
+                     },
+                     {
+                         "id":  "ch13",
+                         "label":  "CH 13",
+                         "title":  "LangChain Expression Language",
+                         "file":  "content/langchain-kr/ch13.md",
+                         "notebooks":  11,
+                         "codeCells":  135,
+                         "files":  11
+                     },
+                     {
+                         "id":  "ch14",
+                         "label":  "CH 14",
+                         "title":  "Chains",
+                         "file":  "content/langchain-kr/ch14.md",
+                         "notebooks":  4,
+                         "codeCells":  78,
+                         "files":  4
+                     },
+                     {
+                         "id":  "ch15",
+                         "label":  "CH 15",
+                         "title":  "Agent",
+                         "file":  "content/langchain-kr/ch15.md",
+                         "notebooks":  11,
+                         "codeCells":  186,
+                         "files":  16
+                     },
+                     {
+                         "id":  "ch16",
+                         "label":  "CH 16",
+                         "title":  "Evaluations",
+                         "file":  "content/langchain-kr/ch16.md",
+                         "notebooks":  14,
+                         "codeCells":  157,
+                         "files":  15
+                     },
+                     {
+                         "id":  "ch17",
+                         "label":  "CH 17",
+                         "title":  "LangGraph",
+                         "file":  "content/langchain-kr/ch17.md",
+                         "notebooks":  33,
+                         "codeCells":  539,
+                         "files":  44
+                     },
+                     {
+                         "id":  "ch18",
+                         "label":  "CH 18",
+                         "title":  "FineTuning",
+                         "file":  "content/langchain-kr/ch18.md",
+                         "notebooks":  2,
+                         "codeCells":  40,
+                         "files":  2
+                     },
+                     {
+                         "id":  "ch19",
+                         "label":  "CH 19",
+                         "title":  "Streamlit",
+                         "file":  "content/langchain-kr/ch19.md",
+                         "notebooks":  1,
+                         "codeCells":  11,
+                         "files":  39
+                     },
+                     {
+                         "id":  "ch20",
+                         "label":  "CH 20",
+                         "title":  "Projects",
+                         "file":  "content/langchain-kr/ch20.md",
+                         "notebooks":  1,
+                         "codeCells":  24,
+                         "files":  1
+                     },
+                     {
+                         "id":  "ch22",
+                         "label":  "CH 22",
+                         "title":  "OpenAI",
+                         "file":  "content/langchain-kr/ch22.md",
+                         "notebooks":  1,
+                         "codeCells":  16,
+                         "files":  1
+                     },
+                     {
+                         "id":  "ch99",
+                         "label":  "CH 99",
+                         "title":  "Projects",
+                         "file":  "content/langchain-kr/ch99.md",
+                         "notebooks":  2,
+                         "codeCells":  20,
+                         "files":  2
+                     }
+                 ]
+}
