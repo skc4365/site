@@ -168,7 +168,7 @@
                                            "id":  "ch05-source",
                                            "label":  "소스 05",
                                            "title":  "Chapter 05 교재 소스",
-                                           "file":  "content/book1/ch_05_교재소스.md",
+                                           "file":  "content/book1/ch_05_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -180,7 +180,7 @@
                                            "id":  "ch06-source",
                                            "label":  "소스 06",
                                            "title":  "Chapter 06 교재 소스",
-                                           "file":  "content/book1/ch_06_교재소스.md",
+                                           "file":  "content/book1/ch_06_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -204,7 +204,7 @@
                                            "id":  "ch08-source",
                                            "label":  "소스 08",
                                            "title":  "Chapter 08 교재 소스",
-                                           "file":  "content/book1/ch_08_교재소스.md",
+                                           "file":  "content/book1/ch_08_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -216,7 +216,7 @@
                                            "id":  "ch09-source",
                                            "label":  "소스 09",
                                            "title":  "Chapter 09 교재 소스",
-                                           "file":  "content/book1/ch_09_교재소스.md",
+                                           "file":  "content/book1/ch_09_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -228,7 +228,7 @@
                                            "id":  "ch10-source",
                                            "label":  "소스 10",
                                            "title":  "Chapter 10 교재 소스",
-                                           "file":  "content/book1/ch_10_교재소스.md",
+                                           "file":  "content/book1/ch_10_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -240,7 +240,7 @@
                                            "id":  "ch11-source",
                                            "label":  "소스 11",
                                            "title":  "Chapter 11 교재 소스",
-                                           "file":  "content/book1/ch_11_교재소스.md",
+                                           "file":  "content/book1/ch_11_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -252,7 +252,7 @@
                                            "id":  "ch12-source",
                                            "label":  "소스 12",
                                            "title":  "Chapter 12 교재 소스",
-                                           "file":  "content/book1/ch_12_교재소스.md",
+                                           "file":  "content/book1/ch_12_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
@@ -264,7 +264,7 @@
                                            "id":  "ch13-source",
                                            "label":  "소스 13",
                                            "title":  "Chapter 13 교재 소스",
-                                           "file":  "content/book1/ch_13_교재소스.md",
+                                           "file":  "content/book1/ch_13_교재소스_2.md",
                                            "textbookSource":  true
                                        },
                                        {
