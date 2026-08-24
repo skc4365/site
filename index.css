@@ -454,6 +454,15 @@ input {
   margin: 0.8em 0;
 }
 
+.chapter-content .chapter-result-image {
+  display: block;
+  width: min(100%, 640px);
+  height: auto;
+  margin: 18px auto 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
 .chapter-content ul,
 .chapter-content ol {
   padding-left: 1.4em;

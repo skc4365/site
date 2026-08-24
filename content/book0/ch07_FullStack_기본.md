@@ -125,4 +125,4 @@ streamlit run frontend.py
 ```
 
 ## 실행결과
-![Streamlit과 FastAPI 실행 결과](content/book0/image-1.png)
+<img class="chapter-result-image" src="content/book0/image-1.png" alt="Streamlit과 FastAPI 실행 결과">
