@@ -22,6 +22,9 @@ temperature: float = 0.2
 is_enabled: bool = True
 
 print(type(service_name), type(max_length))
+
+# 결과
+# <class 'str'> <class 'int'>
 ```
 
 | 자료형 | 의미 | 예시 |
@@ -44,6 +47,9 @@ response = {
 }
 
 print(response["count"])
+
+# 결과
+# 2
 ```
 
 API의 JSON 객체는 Python에서 주로 딕셔너리로 다룹니다.
@@ -62,6 +68,9 @@ for question in questions:
     valid_questions.append(cleaned)
 
 print(valid_questions)
+
+# 결과
+# ['asyncio란?', 'FastAPI란?'] 
 ```
 
 ## 4. 함수와 타입 힌트
@@ -80,6 +89,9 @@ try:
     print(result)
 except ValueError as error:
     print("입력 오류:", error)
+
+# 결과
+# Python이란?
 ```
 
 타입 힌트는 실행을 강제로 제한하지 않지만, IDE와 검증 도구가 오류를 미리 찾게 도와줍니다.
@@ -101,15 +113,14 @@ def build_responses(questions: list[str]) -> list[dict[str, str]]:
 items = build_responses(["Pydantic이란?", " ", "FastAPI란?"])
 for item in items:
     print(item)
+
+# 결과
+# {'id': '1', 'question': 'Pydantic이란?', 'status': 'ready'}
+# {'id': '2', 'question': '', 'status': 'invalid'}
+# {'id': '3', 'question': 'FastAPI란?', 'status': 'ready'}
+
 ```
 
-예상 결과:
-
-```text
-{'id': '1', 'question': 'Pydantic이란?', 'status': 'ready'}
-{'id': '2', 'question': '', 'status': 'invalid'}
-{'id': '3', 'question': 'FastAPI란?', 'status': 'ready'}
-```
 
 ## 실습 과제
 

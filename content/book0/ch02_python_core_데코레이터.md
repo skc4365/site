@@ -62,6 +62,11 @@ def add(a: int, b: int) -> int:
 
 
 print(add(2, 3))
+
+# 결과
+# 호출 시작: add
+# 호출 완료: add
+# 5
 ```
 
 `*args`와 `**kwargs`를 사용하면 다양한 매개변수를 가진 함수를 감쌀 수 있습니다. `functools.wraps`는 원래 함수의 이름, 설명 문서, 타입 관련 메타데이터를 보존하므로 반드시 사용하는 것이 좋습니다.
@@ -105,6 +110,11 @@ def notify(message: str) -> None:
 
 
 notify("작업이 완료되었습니다.")
+
+# 결과
+# 작업이 완료되었습니다.
+# 작업이 완료되었습니다.
+# 작업이 완료되었습니다.
 ```
 
 ### 사용하기 좋은 경우
@@ -139,6 +149,9 @@ def create_summary(text: str) -> str:
 
 
 print(create_summary("데코레이터 결과 검증 예제"))
+
+# 결과
+# 데코레이터 결과 검증 예제
 ```
 
 검증 때문에 함수의 의미가 지나치게 숨겨진다면 일반 함수 호출로 분리하는 편이 더 명확합니다.
@@ -171,6 +184,12 @@ def predict(value: float) -> float:
 
 print(predict(100.0))
 print(predict(120.0))
+
+# 결과
+# predict 호출 횟수: 1
+# 110.00000000000001
+# predict 호출 횟수: 2
+# 132.0
 ```
 
 ### 사용하기 좋은 경우
@@ -199,6 +218,9 @@ class Temperature:
 
 temperature = Temperature(25)
 print(temperature.fahrenheit)
+
+# 결과
+# 77.0
 ```
 
 값을 읽을 때 네트워크 요청이나 긴 작업이 발생한다면 속성처럼 보이는 `@property`보다 명시적인 메서드가 낫습니다.
@@ -220,6 +242,9 @@ class ModelConfig:
 
 config = ModelConfig.for_test()
 print(config.model)
+
+# 결과
+# test-model
 ```
 
 ### `@staticmethod`: 인스턴스 상태가 필요 없는 관련 기능
@@ -234,6 +259,9 @@ class TextValidator:
 
 
 print(TextValidator.is_valid("정상 입력"))
+
+# 결과
+# True
 ```
 
 클래스와 관련성이 약하면 정적 메서드보다 모듈의 일반 함수로 두는 것이 좋습니다.
@@ -255,6 +283,12 @@ def load_model_config(model_name: str) -> dict[str, str]:
 print(load_model_config("agent-model"))
 print(load_model_config("agent-model"))  # 캐시 사용
 print(load_model_config.cache_info())
+
+# 결과
+# 설정 읽기
+# {'model': 'agent-model', 'status': 'ready'}
+# {'model': 'agent-model', 'status': 'ready'}
+# CacheInfo(hits=1, misses=1, maxsize=128, currsize=1)
 ```
 
 같은 입력에 항상 같은 결과를 내는 함수에 적합합니다. 사용자별 권한, 현재 시간, 변경되는 외부 데이터처럼 매번 결과가 달라질 수 있는 함수에는 주의해서 사용합니다.
@@ -274,6 +308,9 @@ class SensorReading:
 
 reading = SensorReading("motor-01", 72.5, "°C")
 print(reading)
+
+# 결과
+# SensorReading(sensor_id='motor-01', value=72.5, unit='°C')
 ```
 
 `@dataclass`는 `__init__`, `__repr__`, 비교 메서드 등을 자동 생성합니다. 데이터 보관이 중심인 클래스의 반복 코드를 줄일 때 사용합니다.
@@ -314,6 +351,9 @@ async def fetch_sensor_data() -> dict[str, float]:
 
 
 asyncio.run(fetch_sensor_data())
+
+# 결과
+# fetch_sensor_data: 0.107초
 ```
 
 동기 wrapper로 비동기 함수를 감싸면 코루틴의 실제 실행 시간을 측정하지 못하거나 `await` 관련 오류가 생길 수 있습니다.
@@ -348,17 +388,15 @@ def run() -> None:
 
 
 run()
+
+# 결과
+# first 시작
+# second 시작
+# 원래 함수
+# second 종료
+# first 종료
 ```
 
-실행 결과:
-
-```text
-first 시작
-second 시작
-원래 함수
-second 종료
-first 종료
-```
 
 즉, `run = first(second(run))`입니다. 인증, 트랜잭션, 재시도처럼 순서에 따라 결과가 달라지는 데코레이터는 적용 순서를 특히 주의합니다.
 

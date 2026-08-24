@@ -36,6 +36,12 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
+	
+#await main()
+
+# 결과
+# 작업-A 시작
+# 작업-A 완료
 ```
 
 `await`는 결과를 기다리는 동안 이벤트 루프가 다른 코루틴을 실행할 기회를 줍니다.
@@ -45,18 +51,31 @@ if __name__ == "__main__":
 순차 실행:
 
 ```python
+# main() 수정해서 결과보기
 first = await fetch_message("A", 1)
 second = await fetch_message("B", 1)
+
+# 결과
+# A 시작
+# B 시작
+# A 완료
+# B 완료
 ```
+
 
 동시 실행:
 
 ```python
+# main() 수정해서 결과보기
 async with asyncio.TaskGroup() as group:
     first_task = group.create_task(fetch_message("A", 1))
     second_task = group.create_task(fetch_message("B", 1))
 
 results = [first_task.result(), second_task.result()]
+
+# 결과
+# A 시작
+# B 시작
 ```
 
 Python 3.12에서는 관련 작업을 묶을 때 `TaskGroup`을 우선 학습합니다. 한 작업이 실패하면 나머지를 취소하고 오류를 모아 전달합니다.
@@ -64,12 +83,23 @@ Python 3.12에서는 관련 작업을 묶을 때 `TaskGroup`을 우선 학습합
 ## 3. 시간 제한
 
 ```python
+# main()안에 수정실습
 async def fetch_with_timeout() -> str:
     try:
         async with asyncio.timeout(1.0):
             return await fetch_message("느린 작업", 2.0)
     except TimeoutError:
         return "시간 초과"
+
+# async def main() -> None:
+#     result = await fetch_with_timeout()
+#     print(f"최종 결과: {result}")
+# if __name__ == "__main__":
+#     asyncio.run(main())
+
+# 결과
+# 느린 작업 시작
+# 최종 결과: 시간 초과
 ```
 
 외부 API 요청에는 반드시 연결·읽기 시간 제한을 둡니다.
@@ -78,7 +108,7 @@ async def fetch_with_timeout() -> str:
 
 ```python
 from time import perf_counter
-
+import asyncio 
 
 async def call_service(name: str, delay: float) -> dict[str, str]:
     await asyncio.sleep(delay)
@@ -101,6 +131,12 @@ async def main() -> None:
 
 
 asyncio.run(main())
+#await main()
+
+# 결과
+# [{'service': 'profile', 'status': 'ok'}, {'service': 'search', 'status': 'ok'}, {'service': 'history', 'status': 'ok'}]
+# elapsed=0.82s
+
 ```
 
 전체 시간은 각 시간을 더한 약 1.9초가 아니라 가장 느린 작업에 가까운 약 0.8초입니다.

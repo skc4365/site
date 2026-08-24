@@ -54,6 +54,12 @@
                                            "label":  "CH 06",
                                            "title":  "FastAPI 심화 기능 및 Streamlit UI 연동",
                                            "file":  "content/book0/ch06_fastapi_streamlit.md"
+                                       },
+                                       {
+                                           "id":  "ch07",
+                                           "label":  "CH 07",
+                                           "title":  "Streamlit과 FastAPI 기본 구조",
+                                           "file":  "content/book0/ch07_FullStack_기본.md"
                                        }
                                    ]
                   },

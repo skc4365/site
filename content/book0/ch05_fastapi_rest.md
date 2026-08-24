@@ -29,6 +29,8 @@ API 문서: http://127.0.0.1:8000/docs
 ## 2. 첫 API
 
 ```python
+# main.py
+
 from fastapi import FastAPI
 
 app = FastAPI(title="Summary API", version="1.0.0")
@@ -37,6 +39,8 @@ app = FastAPI(title="Summary API", version="1.0.0")
 @app.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok"}
+
+# cmd 실행명령 python -m uvicorn main:app --reload
 ```
 
 `async def` Endpoint에서는 비동기 DB·HTTP Client를 `await`할 수 있습니다.

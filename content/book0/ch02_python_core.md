@@ -29,6 +29,9 @@ class TextService:
 
 service = TextService(max_length=20)
 print(service.summarize("클래스는 데이터와 동작을 함께 관리합니다."))
+
+# 결과
+# 클래스는 데이터와 동작을 함께 관리합
 ```
 
 `self`는 현재 인스턴스를 뜻합니다. 설정값은 인스턴스에, 한 번만 사용하는 값은 메서드의 지역변수에 둡니다.
@@ -86,6 +89,9 @@ logging.basicConfig(
 logger = logging.getLogger("text-service")
 
 logger.info("service_started")
+
+# 결과
+# 2026-08-25 00:22:54,922 | INFO | text-service | service_started
 ```
 
 API 키, 비밀번호, 전체 사용자 입력은 로그에 남기지 않습니다.
@@ -107,6 +113,17 @@ def run(service: TextService, text: str) -> str:
 
 print(run(TextService(max_length=12), "  로깅 가능한 서비스 만들기  "))
 print(run(TextService(), " "))
+
+# 결과
+# 2026-08-25 00:26:36,500 | INFO | text-service | service_started
+# 2026-08-25 00:26:36,500 | INFO | text-service | summary_requested length=18
+# 2026-08-25 00:26:36,500 | INFO | text-service | summary_completed result_length=12
+# run: 0.0006s
+# 로깅 가능한 서비스 만
+# 2026-08-25 00:26:36,501 | INFO | text-service | summary_requested length=1
+# 2026-08-25 00:26:36,501 | WARNING | text-service | invalid_input reason=본문을 입력하세요.
+# run: 0.0007s
+# 입력을 확인하세요.
 ```
 
 ## 실습 과제

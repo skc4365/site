@@ -24,10 +24,13 @@ Pydantic 검증 → Service → 결과
 ## 1. 의존성 주입
 
 ```python
+
 from typing import Annotated
 
-from fastapi import Depends, Header, HTTPException
+from fastapi import FastAPI, Depends, Header, HTTPException
 
+# 1. FastAPI 앱 인스턴스 생성
+app = FastAPI()
 
 async def verify_api_key(x_api_key: Annotated[str | None, Header()] = None) -> str:
     if x_api_key != "lesson-key":
@@ -38,6 +41,8 @@ async def verify_api_key(x_api_key: Annotated[str | None, Header()] = None) -> s
 @app.get("/private")
 async def private_data(api_key: Annotated[str, Depends(verify_api_key)]):
     return {"status": "authorized"}
+
+# 실행 # python -m uvicorn main:app --reload
 ```
 
 실제 운영 키는 코드에 넣지 않고 환경변수나 Secret Manager에서 읽습니다.
@@ -64,18 +69,84 @@ Middleware는 모든 요청에 공통으로 적용할 로깅·추적·보안 Hea
 ## 3. BackgroundTasks
 
 ```python
-from fastapi import BackgroundTasks
+# main.py
+
+from time import perf_counter
+from typing import Annotated
+
+from fastapi import BackgroundTasks, Depends, FastAPI, Header, HTTPException, Request
+from pydantic import BaseModel
+
+# FastAPI 앱 생성 (Uvicorn이 'app' 변수를 찾을 수 있도록 선언)
+app = FastAPI(title="Text Summary API")
 
 
+# --- Pydantic 요청 스키마 ---
+class SummaryRequest(BaseModel):
+    text: str
+    max_length: int = 100
+
+
+# --- 의존성: API 키 검증 ---
+async def verify_api_key(x_api_key: Annotated[str | None, Header()] = None) -> str:
+    if x_api_key != "lesson-key":
+        raise HTTPException(status_code=401, detail="API 키가 올바르지 않습니다.")
+    return x_api_key
+
+
+# --- 미들웨어: 처리 시간 측정 ---
+@app.middleware("http")
+async def add_process_time(request: Request, call_next):
+    started = perf_counter()
+    response = await call_next(request)
+    elapsed = perf_counter() - started
+    response.headers["X-Process-Time"] = f"{elapsed:.4f}"
+    return response
+
+
+# --- 헬퍼 함수: 백그라운드 감사 로그 ---
 def write_audit_log(message: str) -> None:
     with open("audit.log", "a", encoding="utf-8") as file:
         file.write(message + "\n")
 
 
+# --- 엔드포인트 1: 보안 데이터 확인 ---
+@app.get("/private")
+async def private_data(api_key: Annotated[str, Depends(verify_api_key)]):
+    return {"status": "authorized"}
+
+
+# --- 엔드포인트 2: 이벤트 기록 ---
 @app.post("/events", status_code=202)
 async def create_event(message: str, background_tasks: BackgroundTasks):
-    background_tasks.add_task(write_audit_log, message)
+    background_tasks.add_task(write_audit_log, f"Event: {message}")
     return {"status": "accepted"}
+
+
+# --- 엔드포인트 3: 텍스트 요약 ---
+@app.post("/summaries", status_code=200)
+async def create_summary(
+    payload: SummaryRequest,
+    api_key: Annotated[str, Depends(verify_api_key)],
+    background_tasks: BackgroundTasks,
+):
+    # 지정한 max_length 길이로 텍스트 자르기 요약 처리
+    summary_text = (
+        f"{payload.text[:payload.max_length]}..."
+        if len(payload.text) > payload.max_length
+        else payload.text
+    )
+
+    # 백그라운드 작업으로 감사 로그 기록
+    background_tasks.add_task(
+        write_audit_log, f"Summary generated (Input len: {len(payload.text)})"
+    )
+
+    return {
+        "summary": summary_text,
+        "original_length": len(payload.text),
+    }
+# 실행 # python -m uvicorn main:app --reload
 ```
 
 오래 걸리거나 반드시 성공해야 하는 작업은 BackgroundTasks가 아니라 별도 Queue와 Worker를 사용합니다.
@@ -88,31 +159,42 @@ async def create_event(message: str, background_tasks: BackgroundTasks):
 import httpx
 import streamlit as st
 
+# FastAPI 서버 주소 및 검증용 API 키
 API_URL = "http://127.0.0.1:8000"
+API_KEY = "lesson-key"
 
-st.set_page_config(page_title="Summary UI")
-st.title("요약 서비스")
+st.set_page_config(page_title="Summary UI", page_icon="📝")
+st.title("📝 텍스트 요약 서비스")
 
-text = st.text_area("요약할 문장")
-max_length = st.slider("최대 길이", min_value=10, max_value=200, value=100)
+# 사용자 입력 양식
+text = st.text_area("요약할 문장을 입력하세요", height=150)
+max_length = st.slider("요약 최대 글자 수", min_value=10, max_value=200, value=100)
 
 if st.button("요약하기", type="primary"):
     if not text.strip():
-        st.warning("문장을 입력하세요.")
+        st.warning("문장을 입력해주세요.")
     else:
-        try:
-            response = httpx.post(
-                f"{API_URL}/summaries",
-                json={"text": text, "max_length": max_length},
-                timeout=10.0,
-            )
-            response.raise_for_status()
-            result = response.json()
-            st.success(result["summary"])
-        except httpx.HTTPStatusError as error:
-            st.error(f"API 오류: {error.response.status_code}")
-        except httpx.RequestError:
-            st.error("FastAPI 서버에 연결할 수 없습니다.")
+        with st.spinner("요약 요청 처리 중..."):
+            try:
+                # FastAPI 서버로 POST 요청 전달
+                response = httpx.post(
+                    f"{API_URL}/summaries",
+                    headers={"X-API-Key": API_KEY},
+                    json={"text": text, "max_length": max_length},
+                    timeout=10.0,
+                )
+                response.raise_for_status()
+                result = response.json()
+
+                st.subheader("요약 결과")
+                st.success(result["summary"])
+                st.caption(f"원문 글자 수: {result['original_length']}자")
+
+            except httpx.HTTPStatusError as error:
+                st.error(f"API 오류가 발생했습니다. (상태 코드: {error.response.status_code})")
+            except httpx.RequestError as exc:
+                st.error("FastAPI 서버에 연결할 수 없습니다. 서버가 가동 중인지 확인하세요.")
+                st.caption(f"상세 에러: {exc}")
 ```
 
 ## 5. 두 서버 실행

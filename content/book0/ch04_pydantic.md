@@ -27,6 +27,10 @@ class SummaryRequest(BaseModel):
 request = SummaryRequest(text="Pydantic은 입력 데이터를 검증합니다.")
 print(request.text)
 print(request.model_dump())
+
+# 결과
+# Pydantic은 입력 데이터를 검증합니다.
+# {'text': 'Pydantic은 입력 데이터를 검증합니다.', 'max_length': 100}
 ```
 
 Pydantic 2에서는 객체를 딕셔너리로 바꿀 때 `model_dump()`를 사용합니다.
@@ -83,6 +87,14 @@ response = SummaryResponse(
     created_at=datetime.now(timezone.utc),
 )
 print(response.model_dump_json(indent=2))
+
+# 결과
+# {
+#   "id": 1,
+#   "summary": "입력 검증 예제",
+#   "original_length": 25,
+#   "created_at": "2026-08-24T15:53:41.382448Z"
+# }
 ```
 
 요청 모델에는 사용자가 입력할 값만, 응답 모델에는 서버가 생성한 값까지 포함합니다.
@@ -107,6 +119,13 @@ for sample in samples:
         print("검증 실패:")
         for detail in error.errors():
             print(detail["loc"], detail["msg"])
+
+# 결과
+# 정상: {'text': '정상적인 요약 요청', 'max_length': 50}
+# 검증 실패:
+# ('text',) String should have at least 2 characters
+# 검증 실패:
+# ('max_length',) Input should be greater than or equal to 10
 ```
 
 ## 실습 과제
