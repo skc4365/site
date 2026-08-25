@@ -27,6 +27,10 @@ Supabase 프로젝트마다 실제 PostgreSQL Database가 제공됩니다. Pytho
 `.env`:
 
 ```text
+
+// SUPABASE_URL : 프로젝트(proj0818)를 선택하여 확인한다.
+// SUPABASE_KEY : 좌측메뉴하단 > 설정 > API Keys > [anon public] KEY
+
 SUPABASE_URL=https://YOUR_PROJECT.supabase.co
 SUPABASE_KEY=YOUR_PUBLISHABLE_OR_ANON_KEY
 ```
