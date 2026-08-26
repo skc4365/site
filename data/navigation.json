@@ -124,6 +124,24 @@
                       "title":  "langchain-kr 전체 소스",
                       "chapters":  [
                                        {
+                                           "id":  "requirements-all",
+                                           "label":  "패키지 전체",
+                                           "title":  "전체 requirements 패키지 용도",
+                                           "file":  "content/langchain-kr/설명_requirements.md"
+                                       },
+                                       {
+                                           "id":  "requirements-ch01-10",
+                                           "label":  "패키지 01-10",
+                                           "title":  "CH 01~10 사용 패키지",
+                                           "file":  "content/langchain-kr/ch1_10_requirements.md"
+                                       },
+                                       {
+                                           "id":  "requirements-ch11-16",
+                                           "label":  "패키지 11-16",
+                                           "title":  "CH 11~16 사용 패키지",
+                                           "file":  "content/langchain-kr/ch11_16_requirements.md"
+                                       },
+                                       {
                                            "id":  "ch01",
                                            "label":  "CH 01",
                                            "title":  "Basic",
