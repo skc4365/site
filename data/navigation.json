@@ -115,6 +115,12 @@
                                            "label":  "TRY 09",
                                            "title":  "GitHub 협업 사용자 가이드",
                                            "file":  "content/book9/try09_github협업가이드.md"
+                                       },
+                                       {
+                                           "id":  "try10-llm-models",
+                                           "label":  "TRY 10",
+                                           "title":  "LLM 모델 이름 읽는 법",
+                                           "file":  "content/book9/try_10.LLM모델별.md"
                                        }
                                    ]
                   },
@@ -266,6 +272,12 @@
                                            "label":  "CH 22",
                                            "title":  "OpenAI",
                                            "file":  "content/langchain-kr/ch22.md"
+                                       },
+                                       {
+                                           "id":  "ch90",
+                                           "label":  "CH 90",
+                                           "title":  "langchain-teddynote 기능과 직접 구현",
+                                           "file":  "content/langchain-kr/ch90_teddynote.md"
                                        },
                                        {
                                            "id":  "ch99",
@@ -742,6 +754,12 @@
                       "shortTitle":  "교재 3",
                       "title":  "AI 에이전트 개발 입문+실전",
                       "chapters":  [
+                                       {
+                                           "id":  "requirements-ch01-11",
+                                           "label":  "패키지 01-11",
+                                           "title":  "CH 01~11 사용 패키지",
+                                           "file":  "content/book3/ch_01_11_requirements.md"
+                                       },
                                        {
                                            "id":  "ch01",
                                            "label":  "CH 01",
