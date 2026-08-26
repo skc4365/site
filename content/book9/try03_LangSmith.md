@@ -9,6 +9,8 @@
 - 필요한 실행만 선택적으로 추적한다.
 
 > 기준 문서: [LangSmith 공식 LangChain 추적 가이드](https://docs.langchain.com/langsmith/trace-with-langchain)
+>
+> 가격 정책: [LangSmith 공식 요금제 및 사용량별 가격](https://www.langchain.com/pricing)
 
 ## 1. LangSmith trace란?
 
