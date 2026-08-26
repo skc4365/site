@@ -65,9 +65,58 @@
       <aside id="chapter-sidebar" class="chapter-sidebar" aria-label="챕터 목록">
         <div class="sidebar-heading">
           <div>
-            <p class="sidebar-label">
-              <a href="https://developers.openai.com/api/docs" target="_blank" rel="noopener noreferrer">Dev-OpenAI-Doc</a>
-            </p>
+            <div id="sidebar-links-menu" class="sidebar-links-menu">
+              <p class="sidebar-label">
+                <button
+                  id="sidebar-links-trigger"
+                  class="sidebar-links-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="sidebar-links-dropdown"
+                >
+                  빠른 링크
+                  <span class="sidebar-links-chevron" aria-hidden="true">⌄</span>
+                </button>
+              </p>
+              <div
+                id="sidebar-links-dropdown"
+                class="sidebar-links-dropdown"
+                aria-label="교육 참고 링크"
+              >
+                <a href="https://wikidocs.net/book/14314" target="_blank" rel="noopener noreferrer">
+                  <span>테디노트 LangChain KR</span>
+                  <small>wikidocs.net</small>
+                </a>
+                <a href="https://wikidocs.net/book/19240" target="_blank" rel="noopener noreferrer">
+                  <span>AI 에이전트 Full-Bloom AI</span>
+                  <small>wikidocs.net</small>
+                </a>
+                <a href="https://wikidocs.net/book/14021" target="_blank" rel="noopener noreferrer">
+                  <span>파이썬 생태계 (2026)</span>
+                  <small>wikidocs.net</small>
+                </a>
+                <a href="https://developers.openai.com/api/docs" target="_blank" rel="noopener noreferrer">
+                  <span>OpenAI 개발자 문서</span>
+                  <small>developers.openai.com</small>
+                </a>
+                <a href="https://fastapi.tiangolo.com/ko/" target="_blank" rel="noopener noreferrer">
+                  <span>FastAPI</span>
+                  <small>fastapi.tiangolo.com</small>
+                </a>
+                <a href="https://fastapicloud.com/docs/getting-started/" target="_blank" rel="noopener noreferrer">
+                  <span>FastAPIcloud</span>
+                  <small>fastapicloud.com</small>
+                </a>
+                <a href="https://sqlmodel.tiangolo.com/tutorial/" target="_blank" rel="noopener noreferrer">
+                  <span>python SQLModel</span>
+                  <small>sqlmodel.tiangolo.com</small>
+                </a>
+                <a href="https://docs.streamlit.io/" target="_blank" rel="noopener noreferrer">
+                  <span>Streamlit</span>
+                  <small>docs.streamlit.io</small>
+                </a>
+              </div>
+            </div>
             <h2 id="current-book-title">교재 불러오는 중</h2>
           </div>
           <button

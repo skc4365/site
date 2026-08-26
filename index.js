@@ -26,6 +26,8 @@ const elements = {
   sidebarToggle: document.querySelector("#sidebar-toggle"),
   sidebarClose: document.querySelector("#sidebar-close"),
   sidebarBackdrop: document.querySelector("#sidebar-backdrop"),
+  sidebarLinksMenu: document.querySelector("#sidebar-links-menu"),
+  sidebarLinksTrigger: document.querySelector("#sidebar-links-trigger"),
 };
 
 function unlockPage() {
@@ -199,6 +201,7 @@ async function loadChapter() {
 }
 
 function closeSidebar() {
+  closeSidebarLinks();
   document.body.classList.remove("sidebar-open");
   elements.sidebarToggle.setAttribute("aria-expanded", "false");
 }
@@ -206,6 +209,17 @@ function closeSidebar() {
 function openSidebar() {
   document.body.classList.add("sidebar-open");
   elements.sidebarToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeSidebarLinks() {
+  elements.sidebarLinksMenu.classList.remove("is-open");
+  elements.sidebarLinksTrigger.setAttribute("aria-expanded", "false");
+}
+
+function toggleSidebarLinks() {
+  const willOpen = !elements.sidebarLinksMenu.classList.contains("is-open");
+  elements.sidebarLinksMenu.classList.toggle("is-open", willOpen);
+  elements.sidebarLinksTrigger.setAttribute("aria-expanded", String(willOpen));
 }
 
 async function renderRoute() {
@@ -255,6 +269,16 @@ elements.sidebarToggle.addEventListener("click", () => {
 });
 elements.sidebarClose.addEventListener("click", closeSidebar);
 elements.sidebarBackdrop.addEventListener("click", closeSidebar);
+elements.sidebarLinksTrigger.addEventListener("click", toggleSidebarLinks);
+document.addEventListener("click", (event) => {
+  if (!elements.sidebarLinksMenu.contains(event.target)) closeSidebarLinks();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && elements.sidebarLinksMenu.classList.contains("is-open")) {
+    closeSidebarLinks();
+    elements.sidebarLinksTrigger.focus();
+  }
+});
 window.addEventListener("hashchange", () => {
   if (state.navigation) renderRoute();
 });
