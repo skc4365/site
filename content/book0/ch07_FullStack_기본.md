@@ -1,128 +1,188 @@
-# FullStack - Streamlit과 FastAPI 기본구조 경험하기
+# Streamlit과 FastAPI 기본 구조
 
-## 수업 목표
+## 학습 목표
 
+- 프런트엔드·백엔드 역할 구분
+- HTTP 요청·응답 흐름 이해
+- 두 서버의 독립 실행
+- 채팅 기록 유지
 
-
-## 최종 구조
+## 한눈에 보는 아키텍처
 
 ```text
-
+사용자
+  ↓ 질문
+Streamlit :8501
+  ↓ POST /api/chat
+FastAPI :8000
+  ↓ 데이터 검증·서비스 처리
+JSON 응답
+  ↓
+Streamlit 화면 출력
 ```
 
-## 의존 설치
+<p style="color:#d32f2f; font-weight:700;">
+Streamlit은 화면, FastAPI는 데이터와 서비스 규칙.
+</p>
 
-```cmd
-# back
-pip install fastapi uvicorn pydantic
+## 1. 개발환경
 
-# front
-pip install streamlit requests
+```powershell
+# 프로젝트 생성
+uv init --app fullstack-app
+cd fullstack-app
+
+# 패키지 설치
+uv add fastapi uvicorn pydantic streamlit httpx
 ```
 
+```text
+fullstack-app/
+├─ backend.py
+├─ frontend.py
+├─ pyproject.toml
+└─ uv.lock
+```
 
-## backend.py
+## 2. FastAPI 백엔드
+
+`backend.py`:
 
 ```python
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+
 
 app = FastAPI(title="AI Agent Backend")
 
-# 클라이언트로부터 받을 데이터 구조 정의
+
 class QueryRequest(BaseModel):
-    user_message: str
+    user_message: str = Field(min_length=1, max_length=1000)
 
-# AI 처리 및 응답 API 엔드포인트
-@app.post("/api/chat")
-async def handle_chat(request: QueryRequest):
-    # 실제 환경에서는 이곳에 LangChain / LangGraph 로직이 들어갑니다.
-    user_input = request.user_message
-    ai_response = f"[AI 에이전트 답변] '{user_input}'에 대한 분석 결과입니다."
-    
-    # JSON 형태로 응답 반환
-    return {
-        "status": "success",
-        "reply": ai_response
-    }
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+class QueryResponse(BaseModel):
+    status: str
+    reply: str
 
+
+@app.post("/api/chat", response_model=QueryResponse)
+async def handle_chat(request: QueryRequest) -> QueryResponse:
+    # 서비스 처리
+    reply = f"[AI 에이전트] {request.user_message}"
+    return QueryResponse(status="success", reply=reply)
 ```
 
+핵심:
 
+- `QueryRequest`: 입력 검증
+- `QueryResponse`: 응답 형식
+- `/api/chat`: 요청 주소
+- `async def`: 비동기 처리
 
-## frontend.py
+## 3. Streamlit 프런트엔드
+
+`frontend.py`:
 
 ```python
+import httpx
 import streamlit as st
-import requests
 
-# 백엔드 API 주소 설정
+
 BACKEND_URL = "http://localhost:8000/api/chat"
 
-st.set_page_config(page_title="AI Agent UI", layout="centered")
-st.title("🤖 AI 에이전트 서비스")
-st.caption("FastAPI 백엔드와 통신하는 Streamlit UI 예시입니다.")
+st.set_page_config(page_title="AI Agent", page_icon="🤖")
+st.title("AI 에이전트")
 
-# Streamlit 세션 상태 초기화 (대화 기록 저장용)
+# 대화 초기화
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# 기존 대화 기록 출력
-for msg in st.session_state.messages:
-    with st.chat_message(msg["role"]):
-        st.markdown(msg["content"])
+# 대화 출력
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
 
-# 사용자 입력 받기
-if user_input := st.chat_input("AI 에이전트에게 질문을 입력하세요..."):
-    
-    # 1. UI에 사용자 메시지 즉시 표시 및 저장
+# 질문 처리
+if prompt := st.chat_input("질문을 입력하세요"):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
     with st.chat_message("user"):
-        st.markdown(user_input)
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    
-    # 2. FastAPI 백엔드로 API 요청 전송
+        st.markdown(prompt)
+
+    try:
+        with st.spinner("처리 중..."):
+            response = httpx.post(
+                BACKEND_URL,
+                json={"user_message": prompt},
+                timeout=30,
+            )
+            response.raise_for_status()
+            answer = response.json()["reply"]
+    except httpx.HTTPError as error:
+        answer = f"백엔드 연결 실패: {error}"
+
+    st.session_state.messages.append(
+        {"role": "assistant", "content": answer}
+    )
+
     with st.chat_message("assistant"):
-        with st.spinner("에이전트가 생각 중입니다..."):
-            try:
-                # HTTP POST 요청 발송 (JSON 데이터 포함)
-                response = requests.post(
-                    BACKEND_URL, 
-                    json={"user_message": user_input},
-                    timeout=30
-                )
-                
-                if response.status_code == 200:
-                    # 응답 데이터 파싱
-                    result = response.json()
-                    ai_reply = result.get("reply", "응답을 파싱하지 못했습니다.")
-                    
-                    # UI에 AI 답변 표시 및 저장
-                    st.markdown(ai_reply)
-                    st.session_state.messages.append({"role": "assistant", "content": ai_reply})
-                else:
-                    st.error(f"백엔드 에러 발생: 상태 코드 {response.status_code}")
-                    
-            except requests.exceptions.ConnectionError:
-                st.error("FastAPI 백ends 서버가 켜져 있는지 확인해주세요. (Connection Refused)")
-
+        st.markdown(answer)
 ```
 
-## 3. 실행 Back
+핵심:
 
-```cmd
-python backend.py
+- `st.chat_input`: 질문 입력
+- `st.session_state`: 대화 유지
+- `httpx.post`: 백엔드 호출
+- `raise_for_status`: 오류 응답 확인
+
+## 4. 실행
+
+터미널 1:
+
+```powershell
+# 백엔드
+uv run uvicorn backend:app --reload --port 8000
 ```
 
-## 4. 실행 Front
+터미널 2:
 
-
-```cmd
-streamlit run frontend.py
+```powershell
+# 프런트엔드
+uv run streamlit run frontend.py --server.port 8501
 ```
 
-## 실행결과
+확인 주소:
+
+- FastAPI 문서: `http://localhost:8000/docs`
+- Streamlit 화면: `http://localhost:8501`
+
+## 기억 공식
+
+```text
+입력 → UI → API → 검증 → 처리 → JSON → 화면
+```
+
+<p style="color:#d32f2f; font-weight:700;">
+화면과 서비스 로직의 분리: 변경·테스트·배포의 시작.
+</p>
+
+## 완료 기준
+
+- [ ] 두 서버 독립 실행
+- [ ] Streamlit 질문 입력
+- [ ] FastAPI 요청 검증
+- [ ] JSON 응답 출력
+- [ ] 연결 오류 표시
+
+## 공식 문서
+
+- [Streamlit 시작하기](https://docs.streamlit.io/get-started)
+- [Streamlit Chat Elements](https://docs.streamlit.io/develop/api-reference/chat)
+- [FastAPI 첫 단계](https://fastapi.tiangolo.com/tutorial/first-steps/)
+- [FastAPI Request Body](https://fastapi.tiangolo.com/tutorial/body/)
+- [HTTPX QuickStart](https://www.python-httpx.org/quickstart/)
+
+## 실행 결과
+
 <img class="chapter-result-image" src="content/book0/image-1.png" alt="Streamlit과 FastAPI 실행 결과">
