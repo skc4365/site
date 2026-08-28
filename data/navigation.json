@@ -133,6 +133,48 @@
                                            "label":  "TRY 10",
                                            "title":  "LLM 모델 이름 읽는 법",
                                            "file":  "content/book9/try_10.LLM모델별.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-01",
+                                           "label":  "과정 01",
+                                           "title":  "Python AI 서비스",
+                                           "file":  "content/book9/try50_공식커리큘럼01.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-02",
+                                           "label":  "과정 02",
+                                           "title":  "AI-Native 설계",
+                                           "file":  "content/book9/try50_공식커리큘럼02.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-03",
+                                           "label":  "과정 03",
+                                           "title":  "LangChain과 RAG",
+                                           "file":  "content/book9/try50_공식커리큘럼03.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-04",
+                                           "label":  "과정 04",
+                                           "title":  "Advanced RAG",
+                                           "file":  "content/book9/try50_공식커리큘럼04.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-05",
+                                           "label":  "과정 05",
+                                           "title":  "Agent와 MCP",
+                                           "file":  "content/book9/try50_공식커리큘럼05.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-06",
+                                           "label":  "과정 06",
+                                           "title":  "LangGraph",
+                                           "file":  "content/book9/try50_공식커리큘럼06.md"
+                                       },
+                                       {
+                                           "id":  "curriculum-07",
+                                           "label":  "과정 07",
+                                           "title":  "협업과 AI 모듈 설계",
+                                           "file":  "content/book9/try50_공식커리큘럼07.md"
                                        }
                                    ]
                   },
