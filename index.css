@@ -609,6 +609,41 @@ input {
   background: transparent;
 }
 
+.chapter-content .architecture-heading::before {
+  content: "▦";
+  color: #28735a;
+}
+
+.chapter-content .architecture-diagram {
+  background: #f3f8f5;
+  border-color: #bfd5c8;
+  border-left-color: #28735a;
+}
+
+.chapter-content .memory-heading {
+  color: #b42318;
+  border-bottom-color: #f1b4ae;
+}
+
+.chapter-content .memory-heading::before {
+  content: "●";
+  color: #d32f2f;
+}
+
+.chapter-content .memory-point {
+  padding: 14px 18px;
+  color: #a61b13;
+  background: #fff4f2;
+  border-left: 4px solid #d32f2f;
+  border-radius: 6px;
+  font-weight: 650;
+}
+
+.chapter-content .memory-point li,
+.chapter-content .memory-point code {
+  color: inherit;
+}
+
 .chapter-content table {
   width: 100%;
   margin: 24px 0;

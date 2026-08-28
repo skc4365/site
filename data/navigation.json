@@ -60,6 +60,12 @@
                                            "label":  "CH 07",
                                            "title":  "Streamlit과 FastAPI 기본 구조",
                                            "file":  "content/book0/ch07_FullStack_기본.md"
+                                       },
+                                       {
+                                           "id":  "ch08-streamlit",
+                                           "label":  "CH 08",
+                                           "title":  "Streamlit 사용자 가이드",
+                                           "file":  "content/book0/ch08_streamlit.md"
                                        }
                                    ]
                   },
@@ -557,6 +563,12 @@
                                            "title":  "Chapter 17 교재 소스",
                                            "file":  "content/book1/ch_17_교재소스.md",
                                            "textbookSource":  true
+                                       },
+                                       {
+                                           "id":  "ch30-prompt-injection",
+                                           "label":  "보안",
+                                           "title":  "프롬프트 인젝션",
+                                           "file":  "content/book1/ch30_promptInjection.md"
                                        }
                                    ]
                   },

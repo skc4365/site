@@ -162,6 +162,25 @@ function renderEmptyChapter() {
   `;
 }
 
+function enhanceLearningContent() {
+  const headings = elements.chapterContent.querySelectorAll("h2, h3");
+
+  headings.forEach((heading) => {
+    const title = heading.textContent.trim();
+    const next = heading.nextElementSibling;
+
+    if (/아키텍처|먼저 보는 구조|한눈에 보는 구조|최종 구조|동작 구조|완성할 환경|먼저 보는 협업 흐름|버전별 관리 예시|관리 한눈에 보기/.test(title)) {
+      heading.classList.add("architecture-heading");
+      if (next?.tagName === "PRE") next.classList.add("architecture-diagram");
+    }
+
+    if (/기억 공식|요점 정리|기억할 내용|가장 중요한 학습 포인트|핵심 원칙|핵심 개념|기억할 핵심|권장 팀 규칙/.test(title)) {
+      heading.classList.add("memory-heading");
+      if (next) next.classList.add("memory-point");
+    }
+  });
+}
+
 async function loadChapter() {
   elements.pageStatus.textContent = `${state.currentChapter.title} 불러오는 중`;
   elements.chapterContent.setAttribute("aria-busy", "true");
@@ -180,6 +199,7 @@ async function loadChapter() {
     } else {
       const unsafeHtml = window.marked.parse(markdown, { gfm: true, breaks: false });
       elements.chapterContent.innerHTML = window.DOMPurify.sanitize(unsafeHtml);
+      enhanceLearningContent();
     }
 
     elements.pageStatus.textContent = `${state.currentChapter.title} 표시 완료`;
