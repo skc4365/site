@@ -1,0 +1,23 @@
+{
+  "title": "AI 네이티브 개발 과정",
+  "courses": [
+    {
+      "name": "파이썬 핵심 문법",
+      "hours": 9,
+      "required": true,
+      "tools": ["Python", "VS Code"]
+    },
+    {
+      "name": "LLM API와 구조화 출력",
+      "hours": 8,
+      "required": true,
+      "tools": ["Pydantic", "OpenAI API"]
+    },
+    {
+      "name": "AI 에이전트 개발",
+      "hours": null,
+      "required": false,
+      "tools": ["LangChain", "MCP"]
+    }
+  ]
+}

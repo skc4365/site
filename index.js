@@ -179,6 +179,18 @@ function enhanceLearningContent() {
       if (next) next.classList.add("memory-point");
     }
   });
+
+  elements.chapterContent.querySelectorAll(".pdf-viewer[data-pdf-src]").forEach((viewer) => {
+    const source = viewer.dataset.pdfSrc;
+    const isLocalPdf = /^content\/[\p{L}\p{N}_./-]+\.pdf(?:#.*)?$/u.test(source);
+    if (!isLocalPdf) return;
+
+    const frame = document.createElement("iframe");
+    frame.src = source;
+    frame.title = viewer.dataset.pdfTitle || "PDF 교안";
+    frame.loading = "lazy";
+    viewer.append(frame);
+  });
 }
 
 async function loadChapter() {

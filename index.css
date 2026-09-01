@@ -609,6 +609,24 @@ input {
   background: transparent;
 }
 
+.chapter-content .pdf-viewer {
+  width: 100%;
+  height: min(75vh, 900px);
+  min-height: 560px;
+  margin: 16px 0 24px;
+  overflow: hidden;
+  background: #f1f5f1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.chapter-content .pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .chapter-content .architecture-heading::before {
   content: "▦";
   color: #28735a;
@@ -955,6 +973,12 @@ input {
     border-right: 0;
     border-left-width: 4px;
     border-radius: 0;
+  }
+
+  .chapter-content .pdf-viewer {
+    height: 70vh;
+    min-height: 440px;
+    border-radius: 4px;
   }
 
   .chapter-content table {

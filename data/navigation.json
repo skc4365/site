@@ -1052,6 +1052,25 @@
                                            "practice":  true
                                        }
                                    ]
+                  },
+                  {
+                      "id":  "book8",
+                      "shortTitle":  "교재 8",
+                      "title":  "AI 네이티브 개발 과정",
+                      "chapters":  [
+                                       {
+                                           "id":  "day1",
+                                           "label":  "DAY 1",
+                                           "title":  "Day 1 수업",
+                                           "file":  "content/book8/day1/day1수업.md"
+                                       },
+                                       {
+                                           "id":  "day1-uv",
+                                           "label":  "DAY 1 UV",
+                                           "title":  "Day 1 uv 수업",
+                                           "file":  "content/book8/day1_uv/day1_uv수업.md"
+                                       }
+                                   ]
                   }
               ]
 }

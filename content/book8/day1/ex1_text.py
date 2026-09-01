@@ -1,0 +1,8 @@
+print("파이썬 학습 목차")
+print("=================")
+print("파이썬 기본 문법", 8)
+print("클래스 · 데코레이터 · 예외 처리 · 로깅", 8)
+print("async/await 및 asyncio 비동기 프로그래밍", 8)
+print("Pydantic BaseModel 데이터 검증", 8)
+print("FastAPI RESTful API 설계", 8)
+print("FastAPI 심화 기능 및 Streamlit UI 연동", 8)
