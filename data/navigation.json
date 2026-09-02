@@ -175,6 +175,30 @@
                                            "label":  "과정 07",
                                            "title":  "협업과 AI 모듈 설계",
                                            "file":  "content/book9/try50_공식커리큘럼07.md"
+                                       },
+                                       {
+                                           "id":  "rag-optimization",
+                                           "label":  "RAG 최적화",
+                                           "title":  "RAG 최적화",
+                                           "file":  "content/book9/try51_RAG최적화.md"
+                                       },
+                                       {
+                                           "id":  "rag-optimization-practice",
+                                           "label":  "RAG 최적화 2",
+                                           "title":  "RAG 최적화 실습",
+                                           "file":  "content/book9/try51_RAG최적화2.md"
+                                       },
+                                       {
+                                           "id":  "ai-agent-optimization",
+                                           "label":  "AI 에이전트 최적화",
+                                           "title":  "AI 에이전트 최적화",
+                                           "file":  "content/book9/try52_AI에이전트최적화.md"
+                                       },
+                                       {
+                                           "id":  "ai-agent-optimization-2",
+                                           "label":  "AI 에이전트 최적화 2",
+                                           "title":  "AI 에이전트 최적화 2",
+                                           "file":  "content/book9/try52_AI에이전트최적화2.md"
                                        }
                                    ]
                   },
