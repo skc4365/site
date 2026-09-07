@@ -20,6 +20,18 @@
                                            "file":  "content/book0/ch01_python_basics.md"
                                        },
                                        {
+                                           "id":  "ch01-with",
+                                           "label":  "보충 01",
+                                           "title":  "파이썬 with 구문",
+                                           "file":  "content/book0/ch01_python_with구문.md"
+                                       },
+                                       {
+                                           "id":  "ch01-generator",
+                                           "label":  "보충 01",
+                                           "title":  "파이썬 제네레이터",
+                                           "file":  "content/book0/ch01_python_제네레이터.md"
+                                       },
+                                       {
                                            "id":  "ch02",
                                            "label":  "CH 02",
                                            "title":  "클래스·데코레이터·예외 처리·로깅",
@@ -145,6 +157,12 @@
                                            "label":  "TRY 09",
                                            "title":  "GitHub 협업 사용자 가이드",
                                            "file":  "content/book9/try09_github협업가이드.md"
+                                       },
+                                       {
+                                           "id":  "try10-fastapi-pip",
+                                           "label":  "TRY 10",
+                                           "title":  "pip로 FastAPI 생성·실행·관리",
+                                           "file":  "content/book9/try10_fastApi_pip.md"
                                        },
                                        {
                                            "id":  "try10-llm-models",
