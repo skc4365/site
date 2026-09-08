@@ -124,6 +124,9 @@ CMD 위치와 가상환경 확인:
 
 ```bat
 (.venv) D:\ws>python -m fastapi dev D:\ws\main.py
+
+# 또는 
+(.venv) D:\ws>uvicorn main:app --reload
 ```
 
 접속 주소:
