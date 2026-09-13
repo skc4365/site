@@ -96,6 +96,78 @@
                                            "label":  "배포 08",
                                            "title":  "Streamlit Community Cloud 배포",
                                            "file":  "content/book0/ch08_streamlitCloud배포.md"
+                                       },
+                                       {
+                                           "id":  "ch10-rag-8steps",
+                                           "label":  "CH 10",
+                                           "title":  "RAG 8단계 사용자 가이드",
+                                           "file":  "content/book0/ch10_RAG_8단계.md"
+                                       },
+                                       {
+                                           "id":  "ch11-rag-document-loader",
+                                           "label":  "CH 11",
+                                           "title":  "RAG 문서 Loader 사용자 가이드",
+                                           "file":  "content/book0/ch11_RAG_문서loader.md"
+                                       },
+                                       {
+                                           "id":  "ch12-rag-document-chunk",
+                                           "label":  "CH 12",
+                                           "title":  "RAG 문서 Loader·Chunk 사용자 가이드",
+                                           "file":  "content/book0/ch12_RAG_문서Chunk.md"
+                                       },
+                                       {
+                                           "id":  "ch13-rag-embed",
+                                           "label":  "CH 13",
+                                           "title":  "RAG 문서 Loader·Chunk·Embedding 사용자 가이드",
+                                           "file":  "content/book0/ch13_RAG_Embed.md"
+                                       },
+                                       {
+                                           "id":  "ch14-rag-vector-store",
+                                           "label":  "CH 14",
+                                           "title":  "RAG 문서 Loader·Chunk·Embedding·Vector Store 사용자 가이드",
+                                           "file":  "content/book0/ch14_RAG_VectorStore.md"
+                                       },
+                                       {
+                                           "id":  "ch15-rag-retriever",
+                                           "label":  "CH 15",
+                                           "title":  "RAG 문서 Loader·Chunk·Embedding·Vector Store·Retriever 사용자 가이드",
+                                           "file":  "content/book0/ch15_RAG_Retriever.md"
+                                       },
+                                       {
+                                           "id":  "ch16-rag-prompt",
+                                           "label":  "CH 16",
+                                           "title":  "RAG 문서 Loader·Chunk·Embedding·Vector Store·Retriever·Prompt 사용자 가이드",
+                                           "file":  "content/book0/ch16_RAG_Prompt.md"
+                                       },
+                                       {
+                                           "id":  "ch17-rag-prompt-context",
+                                           "label":  "CH 17",
+                                           "title":  "RAG Prompt와 Context 경계·구조 가이드",
+                                           "file":  "content/book0/ch17_RAG_Prompt와Context.md"
+                                       },
+                                       {
+                                           "id":  "ch18-rag-llm-call",
+                                           "label":  "CH 18",
+                                           "title":  "RAG 문서 Loader부터 LLM 모델 호출까지 가이드",
+                                           "file":  "content/book0/ch18_RAG_LLM_모델호출.md"
+                                       },
+                                       {
+                                           "id":  "ch19-rag-memory",
+                                           "label":  "CH 19",
+                                           "title":  "RAG 문서 Loader부터 Memory까지 가이드",
+                                           "file":  "content/book0/ch19_RAG_메모리.md"
+                                       },
+                                       {
+                                           "id":  "ch20-langchain-version",
+                                           "label":  "CH 20",
+                                           "title":  "LangChain 0.3과 1.0 버전·문법 비교 가이드",
+                                           "file":  "content/book0/ch20_langChain_버전.md"
+                                       },
+                                       {
+                                           "id":  "module-1-2-test",
+                                           "label":  "TEST 1·2",
+                                           "title":  "모듈 1·2 예상문제와 정답",
+                                           "file":  "content/book0/ch100_모듈1_2테스트.md"
                                        }
                                    ]
                   },
