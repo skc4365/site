@@ -6,7 +6,7 @@ const state = {
   currentChapter: null,
 };
 
-const ACCESS_PASSWORD = "4365";
+const ACCESS_PASSWORD = "";
 const ACCESS_SESSION_KEY = "ai-agent-course-access";
 
 const elements = {
