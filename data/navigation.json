@@ -219,6 +219,12 @@
                                            "file":  "content/book9/try01_supabase_pgvector.md"
                                        },
                                        {
+                                           "id":  "try02-chromadb",
+                                           "label":  "TRY 02",
+                                           "title":  "ChromaDB 학습 가이드",
+                                           "file":  "content/book9/try02_CromaDB.md"
+                                       },
+                                       {
                                            "id":  "try03-langsmith",
                                            "label":  "TRY 03",
                                            "title":  "LangSmith 실행 추적",
